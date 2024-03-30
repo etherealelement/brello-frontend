@@ -16,6 +16,7 @@
   "dependencies": {
     "@effector/reflect": "9.0.0",
     "@supabase/supabase-js": "^2.38.4",
+    "@withease/factories": "^1.0.3",
     "atomic-router": "0.9.4",
     "atomic-router-react": "0.9.1",
     "clsx": "^1.2.1",
