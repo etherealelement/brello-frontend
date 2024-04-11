@@ -4,7 +4,7 @@
     [
       "effector/babel-plugin",
       {
-        "factories": []
+        "factories": ["@withease/factories"]
       }
     ]
   ]
