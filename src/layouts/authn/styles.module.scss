@@ -1,0 +1,19 @@
+.geometric {
+  width: 100%;
+  max-width: 768px;
+  height: 100%;
+  order: 1;
+  margin-bottom: 0;
+  background-image: url("@/shared/assets/images/geometric-desktop.svg");
+}
+
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
