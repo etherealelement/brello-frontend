@@ -22,14 +22,14 @@ export const Layout: FC<LayoutCommonProps> = ({ children }): JSX.Element => {
           <ParagraphComponent fontSize="12px">
             &copy; Brello 2023
           </ParagraphComponent>
-          <ParagraphComponent fontSize="12px">
+          <ParagraphComponent fontSize="12px" className={styles.help}>
             <img src={IconMail01} alt="" width={13} height={10} />
             help@brello.io
           </ParagraphComponent>
         </footer>
       </div>
       <div className={styles.geometric}>
-        <img src={ImageGeometric} alt="" />
+        <img src={ImageGeometric} alt="geometric" />
       </div>
     </main>
   );
