@@ -1,0 +1,47 @@
+.geometric {
+  width: 100%;
+  order: 1;
+  max-width: 902px;
+  margin-bottom: 0;
+  background-image: url("@/shared/assets/images/geometric-desktop.svg");
+  max-height: 100vh;
+  flex: 1;
+}
+
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header {
+  padding: 32px;
+}
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 32px 32px 32px;
+}
+.help {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .geometric {
+    display: none;
+  }
+  .content {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

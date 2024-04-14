@@ -6,6 +6,7 @@ const {Title} = Typography;
 type TitleProps = {
   children: React.ReactNode
   fontSize?: string;
+  fontWeight?: string;
 }
 
-export const TitleComponent = ({children, fontSize}: TitleProps) => <Title className={styles.title} style={{fontSize}}>{children}</Title>
+export const TitleComponent = ({children, fontSize,fontWeight}: TitleProps) => <Title className={styles.title} style={{fontSize,fontWeight}}>{children}</Title>

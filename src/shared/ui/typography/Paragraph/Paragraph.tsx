@@ -1,11 +1,21 @@
-import React from 'react';
-import { Typography } from 'antd';
+import { Typography } from "antd";
+import React from "react";
 
-const {Paragraph} = Typography;
+const { Paragraph } = Typography;
 
 type ParagraphProps = {
   children: React.ReactNode;
   fontSize?: string;
-}
+  className?: string;
+};
 
-export const ParagraphComponent = ({children, fontSize}: ParagraphProps) => <Paragraph style={{fontSize}}>{children}</Paragraph>
+export const ParagraphComponent = ({
+  children,
+  fontSize,
+  className,
+  ...props
+}: ParagraphProps) => (
+  <Paragraph style={{ fontSize, ...props }} className={className}>
+    {children}
+  </Paragraph>
+);
