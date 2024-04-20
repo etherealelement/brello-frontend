@@ -1,0 +1,15 @@
+export { default as IconAlertCircle } from "./alert-circle.svg";
+export { default as IconArrowLeft } from "./arrow-left.svg";
+export { default as IconFile04 } from "./file-04.svg";
+export { default as IconFilm02 } from "./film-02.svg";
+export { default as IconFolderShield } from "./folder-shield.svg";
+export { default as IconImage01 } from "./image-01.svg";
+export { default as IconLayersTwo01 } from "./layers-two-01.svg";
+export { default as IconLogout01 } from "./logout-01.svg";
+export { default as IconMail01 } from "./mail-01.svg";
+export { default as IconMenu02 } from "./menu-02.svg";
+export { default as IconTrash01 } from "./trash-01.svg";
+export { default as IconUploadCloud02 } from "./upload-cloud-02.svg";
+export { default as IconUser01 } from "./user-01.svg";
+export { default as IconUsers02 } from "./users-02.svg";
+export { default as IconXClose } from "./x-close.svg";

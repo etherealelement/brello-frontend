@@ -1,16 +1,18 @@
-import {createEffect, createEvent, createStore, sample} from "effector"
-import {useList, useUnit} from "effector-react"
-import { TextField, TitleComponent, ParagraphComponent } from "@/shared/ui"
+import { calc } from "antd/es/theme/internal";
+
+import { Layout } from "@/layouts/authn";
+
+import { ParagraphComponent, TextField, TitleComponent } from "@/shared/ui";
+import { Input } from "@/shared/ui/Input/Input";
+import { Button } from "@/shared/ui/button";
+import { Logo } from "@/shared/ui/logo";
 
 function App() {
   return (
     <>
-    <TextField placeholder="Enter text" size="large"></TextField>
-    <TitleComponent children="Title"></TitleComponent>
-    <ParagraphComponent children="Paragraph" fontSize="20px"></ParagraphComponent>
-
-    
+      <Layout></Layout>
     </>
-  )}
+  );
+}
 
-export default App
+export default App;
