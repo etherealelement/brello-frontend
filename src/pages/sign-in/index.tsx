@@ -3,6 +3,8 @@ import { FC } from "react";
 
 import { IconMail01 } from "@/shared/assets/icons";
 import { ImageLogomark } from "@/shared/assets/images";
+import { Input } from "@/shared/ui";
+import { Button } from "@/shared/ui/button";
 import { Logo } from "@/shared/ui/logo";
 
 import {
@@ -10,6 +12,7 @@ import {
   $error,
   $finished,
   $pending,
+  SignInError,
   emailChanged,
   formSubmitted,
 } from "./model";
@@ -75,6 +78,12 @@ export const SignInPage: FC = () => {
       </main>
     </>
   );
+};
+
+const errorText: { [Key in SignInError]: string } = {
+  UnknownError: "Something wrong happened. Please try again.",
+  InvalidEmail: "Must be a valid email address.",
+  RateLimit: "Too much logins. Try again later.",
 };
 
 const LoginForm: FC = () => {
