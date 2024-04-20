@@ -5,16 +5,17 @@ import { IconMail01 } from "@/shared/assets/icons";
 import { ImageLogomark } from "@/shared/assets/images";
 import { Logo } from "@/shared/ui/logo";
 
-import { $email, $finished, emailChanged, formSubmitted } from "./model";
+import {
+  $email,
+  $error,
+  $finished,
+  $pending,
+  emailChanged,
+  formSubmitted,
+} from "./model";
 import styles from "./styles.module.scss";
 
 export const SignInPage: FC = () => {
-  const [email, handleEmail, handleSubmit] = useUnit([
-    $email,
-    emailChanged,
-    formSubmitted,
-    $finished,
-  ]);
   return (
     <>
       <main className={styles.root}>
@@ -77,5 +78,33 @@ export const SignInPage: FC = () => {
 };
 
 const LoginForm: FC = () => {
-  return <></>;
+  const [email, error, pending] = useUnit([$email, $error, $pending]);
+  const [handleEmail, handleSubmit] = useUnit([emailChanged, formSubmitted]);
+
+  return (
+    <>
+      <h1 className={styles.headline}>Sign in</h1>
+      <p className={styles.description}>Start your 30-day free trial.</p>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          handleSubmit();
+        }}
+      >
+        <Input
+          className={styles.input}
+          name="email"
+          disabled={pending}
+          value={email}
+          error={error ? errorText[error] : undefined}
+          label="Email"
+          placeholder="Enter your email"
+          onValue={({ value }) => handleEmail(value)}
+        />
+        <Button loading={pending} className={styles.button} type="submit">
+          Get started
+        </Button>
+      </form>
+    </>
+  );
 };
