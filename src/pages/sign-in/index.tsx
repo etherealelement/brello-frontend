@@ -5,6 +5,7 @@ import { IconMail01 } from "@/shared/assets/icons";
 import { ImageLogomark } from "@/shared/assets/images";
 import { Input } from "@/shared/ui";
 import { Button } from "@/shared/ui/button";
+import { FeaturedIcon } from "@/shared/ui/featured-icon";
 import { Logo } from "@/shared/ui/logo";
 
 import {
@@ -114,6 +115,31 @@ const LoginForm: FC = () => {
           Get started
         </Button>
       </form>
+    </>
+  );
+};
+
+const LoginSucceded: FC = () => {
+  return (
+    <>
+      <FeaturedIcon
+        className={styles.featuredIcon}
+        color="primary"
+        Icon={IconMail01}
+      ></FeaturedIcon>
+      <h1 className={styles.headline}>Check your email</h1>
+      <p className={styles.description}>
+        We sent a login link to{" "}
+        <span className={styles.descriptionAccent}>{email}</span>
+      </p>
+      <Button
+        variant="link-gray"
+        className={styles.buttonBack}
+        onClick={() => handleBack()}
+      >
+        <IconArrowLeft className={styles.backIcon} />
+        Back to login
+      </Button>
     </>
   );
 };

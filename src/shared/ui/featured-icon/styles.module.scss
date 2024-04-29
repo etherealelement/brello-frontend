@@ -1,0 +1,52 @@
+.root {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  fill: var(--featured-icon-color);
+  width: 24px;
+  height: 24px;
+}
+
+.color-primary {
+  --featured-icon-border: var(--color-primary-50);
+  --featured-icon-background: var(--color-primary-100);
+  --featured-icon-color: var(--color-primary-600);
+}
+
+.color-gray {
+  --featured-icon-border: var(--color-gray-50);
+  --featured-icon-background: var(--color-gray-100);
+  --featured-icon-color: var(--color-gray-600);
+}
+
+.color-error {
+  --featured-icon-border: var(--color-error-50);
+  --featured-icon-background: var(--color-error-100);
+  --featured-icon-color: var(--color-error-600);
+}
+
+.color-success {
+  --featured-icon-border: var(--color-success-50);
+  --featured-icon-background: var(--color-success-100);
+  --featured-icon-color: var(--color-success-600);
+}
+
+.theme-light-circle-outline {
+  border-radius: 28px;
+  border: 10px solid var(--featured-icon-border, var(--color-primary-50));
+  background: var(--featured-icon-background, var(--color-primary-100));
+  color: var(--featured-icon-color, var(--color-primary-600));
+}
+
+.theme-modern {
+  border-radius: 12px;
+  border: 1px solid var(--color-gray-200);
+  background-color: var(--color-base-white);
+  color: var(--color-gray-700);
+  box-shadow: var(--shadow-xs);
+}
