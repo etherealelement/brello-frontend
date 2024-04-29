@@ -1,4 +1,4 @@
-import { createEvent, createStore } from "effector";
+import { createEvent, createStore, sample } from "effector";
 
 export type SignInError = "InvalidEmail" | "UnknownError" | "RateLimit";
 
@@ -11,4 +11,13 @@ export const $error = createStore<SignInError | null>("InvalidEmail");
 export const $pending = createStore(false);
 export const $finished = createStore(false);
 
+const $isEmailValid = $email.map(
+  (email) => email.length > 5 && email.includes("@") && email.includes("."),
+);
+
 $email.on(emailChanged, (_, email) => email);
+
+sample({
+  clock: formSubmitted,
+  filter: $isEmailValid,
+});
