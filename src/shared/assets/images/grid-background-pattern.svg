@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="768" fill="none" viewBox="0 0 768 768">
+  <mask id="c" width="768" height="768" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+    <path fill="url(#a)" d="M0 0h768v768H0z"/>
+  </mask>
+  <g clip-path="url(#b)" mask="url(#c)">
+    <g clip-path="url(#d)">
+      <path stroke="#EAECF0"
+            d="M.5 0v768m48-768v768m48-768v768m48-768v768m48-768v768m48-768v768m48-768v768m48-768v768m48-768v768m48-768v768m48-768v768m48-768v768m48-768v768m48-768v768m48-768v768m48-768v768"/>
+    </g>
+    <path stroke="#EAECF0" d="M.5.5h767v767H.5z"/>
+    <g clip-path="url(#e)">
+      <path stroke="#EAECF0"
+            d="M0 47.5h768M0 95.5h768m-768 48h768m-768 48h768m-768 48h768m-768 48h768m-768 48h768m-768 48h768m-768 48h768m-768 48h768m-768 48h768m-768 48h768m-768 48h768m-768 48h768m-768 48h768m-768 48h768"/>
+    </g>
+    <path stroke="#EAECF0" d="M.5.5h767v767H.5z"/>
+  </g>
+  <defs>
+    <clipPath id="b">
+      <path fill="#fff" d="M0 0h768v768H0z"/>
+    </clipPath>
+    <clipPath id="d">
+      <path fill="#fff" d="M0 0h768v768H0z"/>
+    </clipPath>
+    <clipPath id="e">
+      <path fill="#fff" d="M0 0h768v768H0z"/>
+    </clipPath>
+    <radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="rotate(90 0 384) scale(384)"
+                    gradientUnits="userSpaceOnUse">
+      <stop/>
+      <stop offset="1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

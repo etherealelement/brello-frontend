@@ -2,6 +2,7 @@ import { useUnit } from "effector-react";
 import { FC } from "react";
 
 import { IconMail01 } from "@/shared/assets/icons";
+import { IconArrowLeft } from "@/shared/assets/icons";
 import { ImageLogomark } from "@/shared/assets/images";
 import { Input } from "@/shared/ui";
 import { Button } from "@/shared/ui/button";
@@ -14,6 +15,7 @@ import {
   $finished,
   $pending,
   SignInError,
+  backToLoginPressed,
   emailChanged,
   formSubmitted,
 } from "./model";
@@ -120,6 +122,7 @@ const LoginForm: FC = () => {
 };
 
 const LoginSucceded: FC = () => {
+  const [email, handleBack] = useUnit([$email, backToLoginPressed]);
   return (
     <>
       <FeaturedIcon
@@ -137,7 +140,7 @@ const LoginSucceded: FC = () => {
         className={styles.buttonBack}
         onClick={() => handleBack()}
       >
-        <IconArrowLeft className={styles.backIcon} />
+        <IconArrowLeft />
         Back to login
       </Button>
     </>

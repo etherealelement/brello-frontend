@@ -1,7 +1,6 @@
-import path from "node:path";
-
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import path from "node:path";
+import { defineConfig } from "vite";
 import svgr from "vite-plugin-svgr";
 
 const MODE = {
@@ -17,7 +16,7 @@ export default defineConfig(({ mode }) => {
       : "[local]-[hash:base64:5]";
 
   return {
-    plugins: [react({ babel: { babelrc: true } })],
+    plugins: [react({ babel: { babelrc: true } }), svgr()],
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),
